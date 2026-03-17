@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>cnc-machine</title>
+<title>CNC Machine</title>
 <style>
 body{
-font-family: Arial;
+font-family:'Segoe UI', Arial;
 background:#f8fafc;
-padding:20px;
 color:#1e293b;
+margin:0;
+padding:20px;
 }
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 }
 h1{
 color:#0f172a;
 }
 .section{
-margin-top:20px;
+margin-top:25px;
+}
+img{
+max-width:100%;
+border-radius:10px;
+margin-top:10px;
 }
 </style>
 </head>
@@ -25,52 +31,55 @@ margin-top:20px;
 <body>
 <div class="container">
 
-<h1>cnc machine </h1>
+<h1>CNC Machine (DIY)</h1>
 
 <div class="section">
 <h2>Problem</h2>
 <p>
-Kids lose interest in traditional learning methods.
+High cost CNC machines are not accessible for students and small projects.
 </p>
 </div>
 
 <div class="section">
 <h2>Solution</h2>
 <p>
-An interactive robotic tree that talks and moves using servo motors.
+Designed and built a low-cost CNC machine capable of basic engraving and cutting.
 </p>
 </div>
 
 <div class="section">
 <h2>Hardware Used</h2>
 <ul>
-<li>Arduino Nano</li>
-<li>Servo Motors</li>
-<li>DFPlayer Mini</li>
-<li>Speaker</li>
+<li>Arduino UNO</li>
+<li>GRBL Firmware</li>
+<li>Stepper Motors (X, Y, Z)</li>
+<li>A4988 Stepper Drivers</li>
+<li>Frame Structure (DIY)</li>
 <li>Power Supply</li>
 </ul>
 </div>
 
 <div class="section">
-<h2>Working</h2>
+<h2>Working Principle</h2>
 <p>
-Servo motors control movement while audio module plays responses.
-System reacts to user interaction.
+The system uses GRBL firmware on Arduino to interpret G-code commands.
+Stepper motors control movement across X, Y, and Z axes to perform engraving operations.
 </p>
 </div>
 
 <div class="section">
 <h2>Challenges</h2>
-<p>
-Power instability causing servo jitter. Solved using stable power supply.
-</p>
+<ul>
+<li>Alignment issues in frame</li>
+<li>Stepper vibration</li>
+<li>Precision tuning</li>
+</ul>
 </div>
 
 <div class="section">
 <h2>Result</h2>
 <p>
-Interactive learning robot for students.
+Successfully built a working CNC machine capable of basic engraving and drawing.
 </p>
 </div>
 
