@@ -2,59 +2,74 @@
 <html>
 <head>
 <title>CNC Machine</title>
+
 <style>
 body{
 font-family:'Segoe UI', Arial;
-background:#f8fafc;
-color:#1e293b;
+background:#f1f5f9;
 margin:0;
-padding:20px;
+color:#1e293b;
 }
+
 .container{
 max-width:900px;
 margin:auto;
+padding:20px;
 }
-h1{
-color:#0f172a;
-}
-.section{
-margin-top:25px;
-}
-img{
-max-width:100%;
+
+.header{
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+color:white;
+padding:20px;
 border-radius:10px;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+border:1px solid #e2e8f0;
+}
+
+h2{
+border-left:4px solid #3b82f6;
+padding-left:10px;
+}
+
+img{
+width:100%;
+border-radius:8px;
 margin-top:10px;
 }
 </style>
+
 </head>
 
 <body>
 <div class="container">
 
+<div class="header">
 <h1>CNC Machine (DIY)</h1>
+<p>Low-cost CNC system for engraving and basic machining</p>
+</div>
 
 <div class="section">
-<h2>Problem</h2>
+<h2>Overview</h2>
 <p>
-High cost CNC machines are not accessible for students and small projects.
+Designed and built a DIY CNC machine using Arduino and stepper motors
+to perform engraving and drawing tasks.
 </p>
 </div>
 
 <div class="section">
-<h2>Solution</h2>
-<p>
-Designed and built a low-cost CNC machine capable of basic engraving and cutting.
-</p>
-</div>
-
-<div class="section">
-<h2>Hardware Used</h2>
+<h2>Hardware Components</h2>
 <ul>
 <li>Arduino UNO</li>
 <li>GRBL Firmware</li>
 <li>Stepper Motors (X, Y, Z)</li>
-<li>A4988 Stepper Drivers</li>
-<li>Frame Structure (DIY)</li>
+<li>A4988 Drivers</li>
+<li>Frame Structure</li>
 <li>Power Supply</li>
 </ul>
 </div>
@@ -62,25 +77,30 @@ Designed and built a low-cost CNC machine capable of basic engraving and cutting
 <div class="section">
 <h2>Working Principle</h2>
 <p>
-The system uses GRBL firmware on Arduino to interpret G-code commands.
-Stepper motors control movement across X, Y, and Z axes to perform engraving operations.
+G-code commands are processed by GRBL firmware on Arduino.
+Stepper motors move along axes to control the tool path.
 </p>
 </div>
 
 <div class="section">
 <h2>Challenges</h2>
 <ul>
-<li>Alignment issues in frame</li>
-<li>Stepper vibration</li>
-<li>Precision tuning</li>
+<li>Frame alignment</li>
+<li>Motor vibration</li>
+<li>Accuracy calibration</li>
 </ul>
 </div>
 
 <div class="section">
 <h2>Result</h2>
 <p>
-Successfully built a working CNC machine capable of basic engraving and drawing.
+Successfully created a functional CNC machine capable of basic engraving.
 </p>
+</div>
+
+<div class="section">
+<h2>Project Images</h2>
+<img src="cnc.jpg">
 </div>
 
 <p><a href="index.html">← Back to Home</a></p>
