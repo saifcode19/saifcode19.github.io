@@ -6,13 +6,13 @@
 
 <style>
 
-/* GLOBAL */
+/* ===== GLOBAL ===== */
 body{
 margin:0;
 font-family:'Segoe UI', Arial;
 background:#f8fafc;
 color:#0f172a;
-line-height:1.6;
+scroll-behavior:smooth;
 }
 
 .container{
@@ -21,45 +21,90 @@ margin:auto;
 padding:20px;
 }
 
-/* HERO */
+/* ===== NAVBAR ===== */
+.navbar{
+position:sticky;
+top:0;
+background:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+.navbar a{
+margin-left:20px;
+text-decoration:none;
+color:#334155;
+font-weight:500;
+}
+
+/* ===== HERO ===== */
 .hero{
-background:linear-gradient(120deg,#3b82f6,#06b6d4);
-color:white;
-padding:50px 30px;
-border-radius:16px;
 text-align:center;
+padding:80px 20px;
 }
 
 .hero h1{
+font-size:42px;
 margin:0;
-font-size:38px;
+}
+
+.hero span{
+color:#3b82f6;
 }
 
 .hero p{
 margin-top:10px;
-opacity:0.9;
+color:#475569;
 }
 
-.hero-btn{
+.buttons{
 margin-top:20px;
-display:inline-block;
-background:white;
-color:#2563eb;
-padding:10px 18px;
-border-radius:8px;
-font-weight:600;
-text-decoration:none;
 }
 
-/* SECTION TITLE */
-.section-title{
-margin-top:50px;
-font-size:24px;
+.btn{
+display:inline-block;
+margin:5px;
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#3b82f6;
+color:white;
+}
+
+.btn-primary:hover{
+background:#2563eb;
+}
+
+.btn-outline{
+border:2px solid #3b82f6;
+color:#3b82f6;
+}
+
+.btn-outline:hover{
+background:#3b82f6;
+color:white;
+}
+
+/* ===== SECTION ===== */
+.section{
+margin-top:60px;
+}
+
+.section h2{
 border-left:5px solid #3b82f6;
 padding-left:10px;
 }
 
-/* PROJECT GRID */
+/* ===== PROJECT GRID ===== */
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -69,62 +114,72 @@ margin-top:20px;
 
 .card{
 background:white;
-border-radius:12px;
-padding:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
 }
 
 .card img{
 width:100%;
-border-radius:10px;
+height:180px;
+object-fit:cover;
 }
 
-.card h3{
-margin:10px 0 5px;
+.card-content{
+padding:15px;
 }
 
-.card a{
-text-decoration:none;
-color:#2563eb;
-font-weight:500;
+.card-content h3{
+margin:0;
 }
 
-/* SKILLS */
+.card-content p{
+font-size:14px;
+color:#475569;
+}
+
+/* ===== SKILLS ===== */
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 gap:15px;
 margin-top:20px;
 }
 
 .skill{
 background:white;
-padding:15px;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
 text-align:center;
-box-shadow:0 5px 10px rgba(0,0,0,0.05);
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.3s;
 }
 
-/* BUTTON */
-.btn{
-display:inline-block;
+.skill:hover{
 background:#3b82f6;
 color:white;
-padding:10px 15px;
-border-radius:8px;
-text-decoration:none;
+transform:scale(1.05);
 }
 
-/* FOOTER */
-.footer{
-margin-top:50px;
+/* ===== CONTACT CARD ===== */
+.contact{
+background:linear-gradient(120deg,#3b82f6,#06b6d4);
+color:white;
+padding:40px;
+border-radius:16px;
 text-align:center;
-font-size:14px;
+margin-top:50px;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
 color:#64748b;
 }
 
@@ -133,46 +188,68 @@ color:#64748b;
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+<b>Saif</b>
+<div>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-<h1>Saif – Electronics & Robotics Engineer</h1>
-<p>Building real-world robotics, embedded systems & electronics projects</p>
+<h1>I build <span>Electronics & Robotics</span> Systems</h1>
+<p>Focused on embedded systems, robotics and real-world engineering projects</p>
 
-<a href="#projects" class="hero-btn">View My Work</a>
+<div class="buttons">
+<a href="#projects" class="btn btn-primary">View Projects</a>
+<a href="saik-resume.pdf" class="btn btn-outline" target="_blank">Resume</a>
+</div>
 </div>
 
 <!-- PROJECTS -->
-<h2 class="section-title" id="projects">Projects</h2>
+<div class="section" id="projects">
+<h2>Projects</h2>
 
 <div class="projects">
 
 <div class="card">
 <img src="eva.jpg">
-<h3>EVA Smart Robot</h3>
-<p>Voice-based educational robot for students.</p>
-<a href="eva-robot.html">View Project →</a>
+<div class="card-content">
+<h3>EVA Robot</h3>
+<p>Voice-based smart assistant for student learning.</p>
+<a href="eva-robot.html">View →</a>
+</div>
 </div>
 
 <div class="card">
 <img src="cnc3.jpg">
+<div class="card-content">
 <h3>CNC Machine</h3>
-<p>DIY Arduino-based engraving system.</p>
-<a href="cnc-machine.html">View Project →</a>
+<p>Arduino-based 2D engraving machine using GRBL.</p>
+<a href="cnc-machine.html">View →</a>
+</div>
 </div>
 
 <div class="card">
 <img src="gripper.jpg">
-<h3>Wireless Gripper Bot</h3>
-<p>Remote-controlled terrain robot.</p>
-<a href="gripper-bot.html">View Project →</a>
+<div class="card-content">
+<h3>Gripper Bot</h3>
+<p>Wireless terrain robot with gripping system.</p>
+<a href="gripper-bot.html">View →</a>
+</div>
 </div>
 
+</div>
 </div>
 
 <!-- SKILLS -->
-<h2 class="section-title">Skills</h2>
+<div class="section" id="skills">
+<h2>Skills</h2>
 
 <div class="skills">
 <div class="skill">Arduino</div>
@@ -182,22 +259,17 @@ color:#64748b;
 <div class="skill">Robotics</div>
 <div class="skill">Circuit Design</div>
 </div>
+</div>
 
-<!-- STARTUP -->
-<h2 class="section-title">Startup</h2>
+<!-- CONTACT -->
+<div class="contact" id="contact">
+<h2>Let’s Connect</h2>
+<p>Interested in robotics, electronics or collaboration?</p>
 
-<p>Building a robotics-focused startup showcasing real-world projects.</p>
-
-<a href="https://instagram.com/yourusername" target="_blank" class="btn">
-View on Instagram
+<a href="https://instagram.com/yourusername" target="_blank" class="btn btn-primary">
+Instagram Startup
 </a>
-
-<!-- RESUME -->
-<h2 class="section-title">Resume</h2>
-
-<a href="saik-resume.pdf" class="btn" target="_blank">
-Download Resume
-</a>
+</div>
 
 <!-- FOOTER -->
 <div class="footer">
